@@ -19,7 +19,8 @@ class ListView extends React.Component {
                 </thead>
                 <tbody>
                     {this.props.employees.map(employee =>
-                        (<EmployeeRow
+                        (<EmployeeRow key={employee.id}
+                            imageFilePath={this.props.imageFilePath}
                             {...employee}
                         />)
                     )}

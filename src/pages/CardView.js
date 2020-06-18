@@ -8,7 +8,8 @@ class CardView extends React.Component {
             <div className="align-center">
                 <div className="d-flex flex-row flex-wrap px-1 justify-content-center">
                     {this.props.employees.map(employee =>
-                        (<EmployeeCard
+                        (<EmployeeCard key={employee.id}
+                            imageFilePath={this.props.imageFilePath}
                             {...employee}
                         />)
                     )}

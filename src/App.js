@@ -6,19 +6,25 @@ import Search from "./components/Search";
 import ListView from "./pages/ListView";
 import CardView from './pages/CardView';
 import employees from "./employees.json";
+import path from "path";
+
+const IMAGE_FILE_PATH = path.join(process.env.PUBLIC_URL, "/images/employees/");
 
 class App extends React.Component {
+
   state = { employees };
 
   render() {
     return (
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Navbar />
         <Search />
-        <Route exact path="/" render={() => <ListView employees={this.state.employees} />} />
-        <Route exact path="/CardView" render={() => <CardView employees={this.state.employees} />} />
+        <Route exact path="/" render={() =>
+          <ListView employees={this.state.employees} imageFilePath={IMAGE_FILE_PATH} />} />
+        <Route exact path="/CardView" render={() =>
+          <CardView employees={this.state.employees} imageFilePath={IMAGE_FILE_PATH} />} />
         <Footer />
-      </BrowserRouter>
+      </BrowserRouter >
     );
   }
 }

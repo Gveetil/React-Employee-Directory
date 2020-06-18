@@ -1,7 +1,5 @@
 import React from "react";
 
-const IMAGE_FILE_PATH = "/images/employees/";
-
 class EmployeeRow extends React.Component {
 
     render(props) {
@@ -9,7 +7,7 @@ class EmployeeRow extends React.Component {
         return (
             <tr className="align-middle">
                 <td><img alt={fullName} className="img-fluid rounded employee-row-image my-2"
-                    src={`${IMAGE_FILE_PATH}${this.props.image}`} /></td>
+                    src={`${this.props.imageFilePath}${this.props.image}`} /></td>
                 <td>{fullName}</td>
                 <td>{this.props.phone}</td>
                 <td><a href={`mailto:${this.props.email}`}>{this.props.email}</a></td>
