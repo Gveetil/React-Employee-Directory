@@ -8,7 +8,7 @@
     "title": "Lead Engineer",
     "department": "Engineering",
     "id": 100,
-    "image": "Employee1.JPG"
+    "image": "Employee1.jpg"
   },
   {
     "firstName": "Velma",
@@ -19,7 +19,7 @@
     "title": "Software Engineer",
     "department": "Engineering",
     "id": 102,
-    "image": "Employee2.JPG"
+    "image": "Employee2.jpg"
   },
   {
     "firstName": "Dylan",
@@ -30,7 +30,7 @@
     "title": "Software Engineer",
     "department": "Engineering",
     "id": 104,
-    "image": "Employee3.JPG"
+    "image": "Employee3.jpg"
   },
   {
     "firstName": "Scott",
@@ -41,7 +41,7 @@
     "title": "Accountant",
     "department": "Finance",
     "id": 106,
-    "image": "Employee4.JPG"
+    "image": "Employee4.jpg"
   },
   {
     "firstName": "Tana",
@@ -52,7 +52,7 @@
     "title": "Finance Manager",
     "department": "Finance",
     "id": 108,
-    "image": "Employee5.JPG"
+    "image": "Employee5.jpg"
   },
   {
     "firstName": "Margaret",
@@ -63,7 +63,7 @@
     "title": "Accountant",
     "department": "Finance",
     "id": 110,
-    "image": "Employee6.JPG"
+    "image": "Employee6.jpg"
   },
   {
     "firstName": "William",
@@ -74,7 +74,7 @@
     "title": "Legal Team Lead",
     "department": "Legal",
     "id": 112,
-    "image": "Employee7.JPG"
+    "image": "Employee7.jpg"
   },
   {
     "firstName": "Carl",
@@ -85,7 +85,7 @@
     "title": "Lawyer",
     "department": "Legal",
     "id": 114,
-    "image": "Employee8.JPG"
+    "image": "Employee8.jpg"
   },
   {
     "firstName": "Renee",
@@ -96,7 +96,7 @@
     "title": "Lawyer",
     "department": "Legal",
     "id": 116,
-    "image": "Employee9.JPG"
+    "image": "Employee9.jpg"
   },
   {
     "firstName": "Ronan",
@@ -107,7 +107,7 @@
     "title": "Sales Lead",
     "department": "Sales",
     "id": 118,
-    "image": "Employee10.JPG"
+    "image": "Employee10.jpg"
   },
   {
     "firstName": "Sonia",
@@ -118,7 +118,7 @@
     "title": "Salesperson",
     "department": "Sales",
     "id": 120,
-    "image": "Employee11.JPG"
+    "image": "Employee11.jpg"
   },
   {
     "firstName": "David",
@@ -129,7 +129,7 @@
     "title": "Salesperson",
     "department": "Sales",
     "id": 122,
-    "image": "Employee12.JPG"
+    "image": "Employee12.jpg"
   },
   {
     "firstName": "Ted",
@@ -140,7 +140,7 @@
     "title": "Lead Engineer",
     "department": "Engineering",
     "id": 124,
-    "image": "Employee13.JPG"
+    "image": "Employee13.jpg"
   },
   {
     "firstName": "Kevin",
@@ -151,7 +151,7 @@
     "title": "Software Engineer",
     "department": "Engineering",
     "id": 126,
-    "image": "Employee14.JPG"
+    "image": "Employee14.jpg"
   },
   {
     "firstName": "George",
@@ -162,7 +162,7 @@
     "title": "Software Engineer",
     "department": "Engineering",
     "id": 128,
-    "image": "Employee15.JPG"
+    "image": "Employee15.jpg"
   },
   {
     "firstName": "Tamara",
@@ -173,7 +173,7 @@
     "title": "Accountant",
     "department": "Finance",
     "id": 130,
-    "image": "Employee16.JPG"
+    "image": "Employee16.jpg"
   },
   {
     "firstName": "Helen",
@@ -184,7 +184,7 @@
     "title": "Finance Manager",
     "department": "Finance",
     "id": 132,
-    "image": "Employee17.JPG"
+    "image": "Employee17.jpg"
   },
   {
     "firstName": "Travis",
@@ -195,7 +195,7 @@
     "title": "Accountant",
     "department": "Finance",
     "id": 134,
-    "image": "Employee18.JPG"
+    "image": "Employee18.jpg"
   },
   {
     "firstName": "Alexander",
@@ -206,7 +206,7 @@
     "title": "Legal Team Lead",
     "department": "Legal",
     "id": 136,
-    "image": "Employee19.JPG"
+    "image": "Employee19.jpg"
   },
   {
     "firstName": "Jeanette",
@@ -217,6 +217,6 @@
     "title": "Lawyer",
     "department": "Legal",
     "id": 138,
-    "image": "Employee20.JPG"
+    "image": "Employee20.jpg"
   }
 ]
