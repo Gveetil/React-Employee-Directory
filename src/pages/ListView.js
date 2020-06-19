@@ -18,15 +18,23 @@ class ListView extends React.Component {
                     </tr>
                 </thead>
                 <tbody>
-                    {this.props.employees.map(employee =>
-                        (<EmployeeRow key={employee.id}
-                            imageFilePath={this.props.imageFilePath}
-                            {...employee}
-                        />)
-                    )}
+                    {this.renderRows()}
                 </tbody>
             </table>
         );
+    }
+
+    renderRows() {
+        if (this.props.employees === null || this.props.employees.length <= 0) {
+            return <tr>
+                <td colSpan="8" className="py-4 text-center">
+                    Your Search did not match any employees !</td>
+            </tr>
+        }
+        return this.props.employees.map(employee =>
+            (<EmployeeRow key={employee.id}
+                imageFilePath={this.props.imageFilePath}
+                {...employee} />));
     }
 }
 

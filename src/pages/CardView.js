@@ -7,15 +7,21 @@ class CardView extends React.Component {
         return (
             <div className="align-center">
                 <div className="d-flex flex-row flex-wrap px-1 justify-content-center">
-                    {this.props.employees.map(employee =>
-                        (<EmployeeCard key={employee.id}
-                            imageFilePath={this.props.imageFilePath}
-                            {...employee}
-                        />)
-                    )}
+                    {this.renderCards()}
+
                 </div>
             </div>
         );
+    }
+
+    renderCards() {
+        if (this.props.employees === null || this.props.employees.length <= 0) {
+            return <div>Your Search did not match any employees !</div>
+        }
+        return this.props.employees.map(employee =>
+            (<EmployeeCard key={employee.id}
+                imageFilePath={this.props.imageFilePath}
+                {...employee} />));
     }
 }
 

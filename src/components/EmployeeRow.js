@@ -3,12 +3,11 @@ import React from "react";
 class EmployeeRow extends React.Component {
 
     render(props) {
-        const fullName = `${this.props.firstName} ${this.props.lastName}`;
         return (
             <tr className="align-middle">
-                <td><img alt={fullName} className="img-fluid rounded employee-row-image my-2"
+                <td><img alt={this.props.name} className="img-fluid rounded employee-row-image my-2"
                     src={`${this.props.imageFilePath}${this.props.image}`} /></td>
-                <td>{fullName}</td>
+                <td>{this.props.name}</td>
                 <td>{this.props.phone}</td>
                 <td><a href={`mailto:${this.props.email}`}>{this.props.email}</a></td>
                 <td>{this.props.title}</td>

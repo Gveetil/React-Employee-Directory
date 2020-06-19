@@ -1,18 +1,16 @@
 [
   {
-    "firstName": "Bethany",
-    "lastName": "Gilbert",
+    "name": "Bethany Gilbert",
     "phone": "(09) 2286 0460",
     "email": "Bethany@fakemail.com",
     "location": "Melbourne",
-    "title": "Lead Engineer",
+    "title": "Intern Engineer",
     "department": "Engineering",
     "id": 100,
     "image": "Employee1.jpg"
   },
   {
-    "firstName": "Velma",
-    "lastName": "Carlson",
+    "name": "Velma Carlson",
     "phone": "(09) 5206 1393",
     "email": "Velma@fakemail.com",
     "location": "Perth",
@@ -22,19 +20,17 @@
     "image": "Employee2.jpg"
   },
   {
-    "firstName": "Dylan",
-    "lastName": "Gray",
+    "name": "Dylan Gray",
     "phone": "(09) 0484 0908",
     "email": "Dylan@fakemail.com",
     "location": "Sydney",
-    "title": "Software Engineer",
+    "title": "Lead Engineer",
     "department": "Engineering",
     "id": 104,
     "image": "Employee3.jpg"
   },
   {
-    "firstName": "Scott",
-    "lastName": "Perry",
+    "name": "Scott Perry",
     "phone": "(09) 8256 6791",
     "email": "Scott@fakemail.com",
     "location": "Melbourne",
@@ -44,8 +40,7 @@
     "image": "Employee4.jpg"
   },
   {
-    "firstName": "Tana",
-    "lastName": "Talley",
+    "name": "Tana Talley",
     "phone": "(09) 0437 1972",
     "email": "Tana@fakemail.com",
     "location": "Perth",
@@ -55,41 +50,37 @@
     "image": "Employee5.jpg"
   },
   {
-    "firstName": "Margaret",
-    "lastName": "Stuart",
+    "name": "Margaret Stuart",
     "phone": "(09) 5277 3808",
     "email": "Margaret@fakemail.com",
     "location": "Sydney",
-    "title": "Accountant",
+    "title": "Intern Accountant",
     "department": "Finance",
     "id": 110,
     "image": "Employee6.jpg"
   },
   {
-    "firstName": "William",
-    "lastName": "Cohen",
+    "name": "William Cohen",
     "phone": "(09) 5750 4337",
     "email": "William@fakemail.com",
     "location": "Melbourne",
-    "title": "Legal Team Lead",
+    "title": "Lawyer",
     "department": "Legal",
     "id": 112,
     "image": "Employee7.jpg"
   },
   {
-    "firstName": "Carl",
-    "lastName": "Farmer",
+    "name": "Carl Farmer",
     "phone": "(09) 8996 0863",
     "email": "Carl@fakemail.com",
     "location": "Perth",
-    "title": "Lawyer",
+    "title": "Legal Team Lead",
     "department": "Legal",
     "id": 114,
     "image": "Employee8.jpg"
   },
   {
-    "firstName": "Renee",
-    "lastName": "Morrison",
+    "name": "Renee Morrison",
     "phone": "(09) 4872 7834",
     "email": "Renee@fakemail.com",
     "location": "Sydney",
@@ -99,8 +90,7 @@
     "image": "Employee9.jpg"
   },
   {
-    "firstName": "Ronan",
-    "lastName": "Jackson",
+    "name": "Ronan Jackson",
     "phone": "(09) 6290 7889",
     "email": "Ronan@fakemail.com",
     "location": "Melbourne",
@@ -110,8 +100,7 @@
     "image": "Employee10.jpg"
   },
   {
-    "firstName": "Sonia",
-    "lastName": "Pearson",
+    "name": "Sonia Pearson",
     "phone": "(09) 9415 1179",
     "email": "Sonia@fakemail.com",
     "location": "Perth",
@@ -121,8 +110,7 @@
     "image": "Employee11.jpg"
   },
   {
-    "firstName": "David",
-    "lastName": "Chen",
+    "name": "David Chen",
     "phone": "(09) 9903 4032",
     "email": "David@fakemail.com",
     "location": "Sydney",
@@ -132,30 +120,27 @@
     "image": "Employee12.jpg"
   },
   {
-    "firstName": "Ted",
-    "lastName": "Erickson",
+    "name": "Ted Erickson",
     "phone": "(09) 1882 0389",
     "email": "Ted@fakemail.com",
     "location": "Melbourne",
-    "title": "Lead Engineer",
-    "department": "Engineering",
+    "title": "Salesperson",
+    "department": "Sales",
     "id": 124,
     "image": "Employee13.jpg"
   },
   {
-    "firstName": "Kevin",
-    "lastName": "Whitney",
+    "name": "Kevin Whitney",
     "phone": "(09) 3238 3988",
     "email": "Kevin@fakemail.com",
     "location": "Perth",
-    "title": "Software Engineer",
+    "title": "Lead Engineer",
     "department": "Engineering",
     "id": 126,
     "image": "Employee14.jpg"
   },
   {
-    "firstName": "George",
-    "lastName": "Martinez",
+    "name": "George Martinez",
     "phone": "(09) 7118 3813",
     "email": "George@fakemail.com",
     "location": "Sydney",
@@ -165,41 +150,37 @@
     "image": "Employee15.jpg"
   },
   {
-    "firstName": "Tamara",
-    "lastName": "Wade",
+    "name": "Tamara Wade",
     "phone": "(09) 4742 8675",
     "email": "Tamara@fakemail.com",
     "location": "Melbourne",
-    "title": "Accountant",
+    "title": "Finance Manager",
     "department": "Finance",
     "id": 130,
     "image": "Employee16.jpg"
   },
   {
-    "firstName": "Helen",
-    "lastName": "Wilkins",
+    "name": "Helen Wilkins",
     "phone": "(09) 1741 4400",
     "email": "Helen@fakemail.com",
     "location": "Perth",
-    "title": "Finance Manager",
+    "title": "Accountant",
     "department": "Finance",
     "id": 132,
     "image": "Employee17.jpg"
   },
   {
-    "firstName": "Travis",
-    "lastName": "Daugherty",
+    "name": "Travis Daugherty",
     "phone": "(09) 5232 0583",
     "email": "Travis@fakemail.com",
     "location": "Sydney",
-    "title": "Accountant",
-    "department": "Finance",
+    "title": "Sales Lead",
+    "department": "Sales",
     "id": 134,
     "image": "Employee18.jpg"
   },
   {
-    "firstName": "Alexander",
-    "lastName": "Morrow",
+    "name": "Alexander Morrow",
     "phone": "(09) 0533 5366",
     "email": "Alexander@fakemail.com",
     "location": "Melbourne",
@@ -209,8 +190,7 @@
     "image": "Employee19.jpg"
   },
   {
-    "firstName": "Jeanette",
-    "lastName": "Porter",
+    "name": "Jeanette Porter",
     "phone": "(09) 3597 9499",
     "email": "Jeanette@fakemail.com",
     "location": "Perth",
