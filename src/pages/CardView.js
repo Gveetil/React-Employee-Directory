@@ -6,9 +6,8 @@ class CardView extends React.Component {
     render() {
         return (
             <div className="align-center">
-                <div className="d-flex flex-row flex-wrap px-1 justify-content-center">
+                <div className="d-flex flex-row flex-wrap px-1 pb-3 justify-content-center">
                     {this.renderCards()}
-
                 </div>
             </div>
         );

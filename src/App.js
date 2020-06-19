@@ -3,30 +3,47 @@ import { BrowserRouter, Route } from "react-router-dom";
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Search from "./components/Search";
-import ListView from "./pages/ListView";
+import TableView from "./pages/TableView";
 import CardView from './pages/CardView';
-import employeeDatabase from "./employees.json";
+import Employees from "./utils/Employees";
 import path from "path";
 
 const IMAGE_FILE_PATH = path.join(process.env.PUBLIC_URL, "/images/employees/");
 
 class App extends React.Component {
 
-  state = { employees: employeeDatabase };
+  constructor(props) {
+    super(props);
+    this.state = {
+      employees: Employees.all(),
+      sort: { sortColumn: "name", sortAscending: true },
+      search: { name: "", title: "", location: "", department: "" }
+    };
+    // Apply default sort criteria  
+    Employees.applySort(this.state.employees, this.state.sort);
+  }
 
   executeSearch = (searchCriteria) => {
-    const nameRegex = new RegExp(searchCriteria.name.trim(), 'i');
-    const titleRegex = new RegExp(searchCriteria.title.trim(), 'i');
-    const locationRegex = new RegExp(searchCriteria.location.trim(), 'i');
-    const departmentRegex = new RegExp(searchCriteria.department.trim(), 'i');
-    const filteredEmployees = employeeDatabase
-      .filter(employee => {
-        return nameRegex.test(employee.name)
-          && titleRegex.test(employee.title)
-          && locationRegex.test(employee.location)
-          && departmentRegex.test(employee.department);
-      });
-    this.setState({ employees: filteredEmployees });
+    // Fetch filtered employees
+    const filteredEmployees = Employees.filter(searchCriteria);
+    // Apply current sort criteria  
+    Employees.applySort(filteredEmployees, this.state.sort);
+    this.setState({
+      ...this.state,
+      employees: filteredEmployees,
+      search: { ...searchCriteria }
+    });
+    console.log("filter", searchCriteria);
+  };
+
+  handleSortChanged = (sortCriteria) => {
+    // Apply new sort criteria to the current employee selection  
+    Employees.applySort(this.state.employees, sortCriteria);
+    this.setState({
+      ...this.state,
+      sort: { ...sortCriteria }
+    });
+    console.log("sort", sortCriteria);
   };
 
   render() {
@@ -35,9 +52,14 @@ class App extends React.Component {
         <Navbar />
         <Search executeSearch={this.executeSearch} />
         <Route exact path="/" render={() =>
-          <ListView employees={this.state.employees} imageFilePath={IMAGE_FILE_PATH} />} />
+          <TableView
+            handleSortChanged={this.handleSortChanged}
+            employees={this.state.employees}
+            imageFilePath={IMAGE_FILE_PATH} />} />
         <Route exact path="/CardView" render={() =>
-          <CardView employees={this.state.employees} imageFilePath={IMAGE_FILE_PATH} />} />
+          <CardView
+            employees={this.state.employees}
+            imageFilePath={IMAGE_FILE_PATH} />} />
         <Footer />
       </BrowserRouter >
     );

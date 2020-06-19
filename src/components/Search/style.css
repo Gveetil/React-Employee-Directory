@@ -1,0 +1,23 @@
+
+.reset-button{
+    background-color: #e9ecef;
+    border-color: #ced4da;
+    color: black;
+    padding-left: 0.8rem;
+    padding-right: 1rem;
+    margin-bottom: 1rem;
+}
+  
+.search-form .input-group,
+.search-form select{
+    margin-bottom: 1rem;
+    min-width: 18rem;
+}
+
+/* search inputs scale for smaller viewports*/
+@media only screen and (max-width: 480px) {  
+    .search-form .input-group,
+    .search-form select{
+        min-width: auto;
+    }
+}

@@ -1,0 +1,20 @@
+
+.employee-row-image{
+    max-width: 3rem;
+    object-fit: cover;
+    object-position: center; 
+  }
+
+.reg-column:not(:disabled):not(.disabled) {
+    cursor: not-allowed;
+ }
+  
+.employee-table td{
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+  }
+  
+.reg-column,
+.sort-column{
+  background-color: rgb(111, 99, 116);
+}

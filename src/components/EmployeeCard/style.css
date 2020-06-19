@@ -1,0 +1,23 @@
+
+.employee-card{
+    width: 15rem;
+}
+
+.employee-card-image{
+  max-width: 6rem;
+  object-fit: cover;
+  object-position: center; 
+}
+
+.employee-card p,
+.employee-card h6{
+  margin: 0.3rem;
+}
+
+/* employee card scales up for smaller viewports*/
+@media only screen and (max-width: 480px) {
+    .employee-card{
+      width: 90%;
+    }  
+  }
+  

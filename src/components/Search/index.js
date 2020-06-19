@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.css";
 
 class Search extends React.Component {
 
@@ -10,8 +11,8 @@ class Search extends React.Component {
     };
 
     handleInputChange = async event => {
-        let value = event.target.value;
-        const name = event.target.name;
+        let value = event.currentTarget.value;
+        const name = event.currentTarget.name;
         await this.setState({
             [name]: value
         });

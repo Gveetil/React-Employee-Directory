@@ -1,0 +1,24 @@
+body {
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+.main{  
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 50px; 
+}
+
+.emp-dir-background{
+  background-color: rgb(75, 54, 82);
+}
+
+.footer{
+  background-color: rgb(75, 54, 82);
+  color: gainsboro;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
