@@ -5,7 +5,7 @@ class EmployeeCard extends React.Component {
     render(props) {
         return (
             <div className="card employee-card pb-0 rounded-0 text-center">
-                <div class="card-body p-2">
+                <div className="card-body p-2">
                     <img alt={this.props.name} className="img-fluid rounded-circle employee-card-image m-2"
                         src={`${this.props.imageFilePath}${this.props.image}`} />
                     <h5 className="card-title">{this.props.name}</h5>
