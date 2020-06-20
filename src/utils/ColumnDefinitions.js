@@ -2,10 +2,10 @@
 // This module configures Column Definitions used to search and sort employee data 
 const ColumnDefinitions = {
     // List of column definitions: 
-    // id, display name, 
+    // id - column id , name - display name, 
     // sort(true if column supports sorting) 
-    // filter(true if column supports searching) 
-    // options - column search is restricted to list of options
+    // filter(true if column supports filtering) 
+    // options - column filter is restricted to list of options
     columns: [
         { "id": "image", "name": "Picture", "sort": false },
         { "id": "name", "name": "Name", "sort": true, filter: true },

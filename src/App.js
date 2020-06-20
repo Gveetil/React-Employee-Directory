@@ -17,22 +17,27 @@ class App extends React.Component {
 
   constructor(props) {
     super(props);
+
+    // Apply default sort criteria to employee dataset before loading state
+    const employeeDataset = Employees.all();
+    Employees.applySort(employeeDataset, ColumnDefinitions.defaultSort());
+
     // Load state
     this.state = {
-      employees: Employees.all(),
+      employees: employeeDataset,
       sort: ColumnDefinitions.defaultSort(),
       filter: ColumnDefinitions.defaultFilter()
     };
-    // Apply default sort criteria to state before rendering
-    Employees.applySort(this.state.employees, this.state.sort);
   }
 
   // This function applies a search filter to the employees dataset
   handleFilterChanged = (filter) => {
     const searchCriteria = { ...this.state.filter, ...filter };
     const filteredEmployees = Employees.filter(searchCriteria);
+
     // Apply current sort criteria  
     Employees.applySort(filteredEmployees, this.state.sort);
+
     this.setState({ ...this.state, employees: filteredEmployees, filter: { ...searchCriteria } });
   };
 
@@ -46,10 +51,12 @@ class App extends React.Component {
     return (
       <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Navbar />
+
         <Search
           filter={this.state.filter}
           columnDefinitions={ColumnDefinitions}
           handleFilterChanged={this.handleFilterChanged} />
+
         <Switch>
           <Route exact path="/CardView" render={() =>
             <CardView
@@ -65,6 +72,7 @@ class App extends React.Component {
               employees={this.state.employees}
               imageFilePath={IMAGE_FILE_PATH} />} />
         </Switch>
+
         <Footer />
       </BrowserRouter >
     );
