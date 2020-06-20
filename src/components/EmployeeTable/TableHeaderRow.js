@@ -2,36 +2,34 @@ import React from "react";
 import SortableColumn from "./SortableColumn";
 import RegularColumn from "./RegularColumn";
 
+// This component generates a table header row based on the column definitions specified
 class TableHeaderRow extends React.Component {
-    state = {
-        sortColumn: "name",
-        sortAscending: true
-    }
 
+    // Event handler for click on a sortable column - updates the table sort order
     handleSortColumn = async event => {
         event.preventDefault();
         const newSortColumn = event.currentTarget.name;
         let sortOrderAscending = true;
-        if (this.state.sortColumn === newSortColumn) {
+        if (this.props.sort.sortColumn === newSortColumn) {
             // Change sort order since it is the same column
-            sortOrderAscending = !this.state.sortAscending;
+            sortOrderAscending = !this.props.sort.sortAscending;
         }
-        await this.setState({
+        // Update table sort
+        this.props.handleSortChanged({
             sortColumn: newSortColumn,
             sortAscending: sortOrderAscending
         });
-        this.props.handleSortChanged(this.state);
     }
 
     render() {
         return (
             <thead>
                 <tr>
-                    {this.props.columnDefinitions.map(column => {
+                    {this.props.columnDefinitions.columns.map(column => {
                         return (column.sort) ?
                             (<SortableColumn key={column.id} column={column}
-                                sortColumn={this.state.sortColumn}
-                                sortAscending={this.state.sortAscending}
+                                sortColumn={this.props.sort.sortColumn}
+                                sortAscending={this.props.sort.sortAscending}
                                 handleSortColumn={this.handleSortColumn} />)
                             :
                             (<RegularColumn key={column.id} column={column} />)
@@ -39,16 +37,6 @@ class TableHeaderRow extends React.Component {
                 </tr>
             </thead >
         );
-    }
-
-    renderSortOrder(columnName) {
-        if (this.state.sortColumn === columnName) {
-            if (this.state.sortAscending)
-                return <i className="fa fa-caret-up fa-lg pl-2" aria-hidden="true"></i>;
-            else
-                return <i className="fa fa-caret-down fa-lg pl-2" aria-hidden="true"></i>;
-        }
-        return "";
     }
 }
 

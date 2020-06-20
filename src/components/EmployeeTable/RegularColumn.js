@@ -1,5 +1,6 @@
 import React from "react";
 
+// This component generates a regular / non-sortable header column for the table
 class RegularColumn extends React.Component {
     render() {
         return (

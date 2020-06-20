@@ -1,5 +1,6 @@
+/* styles used by the table component */
 
-.employee-row-image{
+.table-row-image{
     max-width: 3rem;
     object-fit: cover;
     object-position: center; 

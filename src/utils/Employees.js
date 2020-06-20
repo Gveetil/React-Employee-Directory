@@ -10,21 +10,25 @@ const Employees = {
     // Filter employees based on the search criteria passed in
     // and return the matching records
     filter(searchCriteria) {
-        // If search criteria is empty, return whole dataset 
-        if (searchCriteria.name.trim() === "" && searchCriteria.title.trim() === "" &&
-            searchCriteria.location.trim() === "" && searchCriteria.department.trim() === "")
-            return employeeDataset;
+        // Loop through search criteria passed in, extract only items with values
+        const filterConditions = Object.keys(searchCriteria)
+            .filter(searchColumn => (searchCriteria[searchColumn].trim() !== ""))
+            .map(searchColumn => ({
+                "key": searchColumn,
+                "value": searchCriteria[searchColumn].trim().toLowerCase()
+            }));
 
-        const nameRegex = new RegExp(searchCriteria.name.trim(), 'i');
-        const titleRegex = new RegExp(searchCriteria.title.trim(), 'i');
-        const locationRegex = new RegExp(searchCriteria.location.trim(), 'i');
-        const departmentRegex = new RegExp(searchCriteria.department.trim(), 'i');
+        // If filter criteria is specified, return whole dataset 
+        if (filterConditions.length <= 0) {
+            return employeeDataset;
+        }
+
         return employeeDataset
             .filter(employee => {
-                return nameRegex.test(employee.name)
-                    && titleRegex.test(employee.title)
-                    && locationRegex.test(employee.location)
-                    && departmentRegex.test(employee.department);
+                // Return only employees matching ALL the filter criteria
+                return filterConditions.reduce((isSelected, filterColumn) =>
+                    (isSelected && (employee[filterColumn.key].toLowerCase().includes(filterColumn.value))
+                    ), true);
             });
     },
 

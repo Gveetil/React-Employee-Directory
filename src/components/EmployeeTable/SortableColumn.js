@@ -1,5 +1,6 @@
 import React from "react";
 
+// This component generates a sortable header column for the table
 class SortableColumn extends React.Component {
     render() {
         return (
@@ -11,6 +12,7 @@ class SortableColumn extends React.Component {
             </th>);
     }
 
+    // Display the sort icons based on sort order
     renderSortOrder(columnName) {
         if (this.props.sortColumn === columnName) {
             if (this.props.sortAscending)

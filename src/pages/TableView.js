@@ -1,24 +1,17 @@
 import React from "react";
 import EmployeeTable from "../components/EmployeeTable";
 
+// This page displays employee data in a table based on the column definitions specified
 class TableView extends React.Component {
-
-    columnDefinitions = [
-        { "id": "picture", "name": "Picture", "sort": false },
-        { "id": "name", "name": "Name", "sort": true },
-        { "id": "phone", "name": "Phone", "sort": false },
-        { "id": "email", "name": "Email", "sort": false },
-        { "id": "title", "name": "Title", "sort": true },
-        { "id": "department", "name": "Department", "sort": true },
-        { "id": "location", "name": "Location", "sort": true },
-        { "id": "id", "name": "Employee Id", "sort": true }
-    ];
 
     render() {
         return (
             <EmployeeTable
-                {...this.props}
-                columnDefinitions={this.columnDefinitions} />
+                handleSortChanged={this.props.handleSortChanged}
+                employees={this.props.employees}
+                sort={this.props.sort}
+                imageFilePath={this.props.imageFilePath}
+                columnDefinitions={this.props.columnDefinitions} />
         );
     }
 
