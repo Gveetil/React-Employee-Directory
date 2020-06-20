@@ -9,7 +9,7 @@ class SearchSelect extends React.Component {
                 onChange={this.props.handleInputChange}
                 name={this.props.column.id}
                 title={this.props.column.name}>
-                <option value="">{this.props.column.name}...</option>
+                <option value="">{this.props.column.name} ...</option>
                 {this.props.column.options.map(item =>
                     <option key={item} value={item}>{item}</option>
                 )}
