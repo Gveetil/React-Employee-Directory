@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { HashRouter, Route, Switch } from "react-router-dom";
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Search from "./components/Search";
@@ -49,7 +49,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <HashRouter basename={process.env.PUBLIC_URL}>
         <Navbar />
 
         <Search
@@ -74,7 +74,7 @@ class App extends React.Component {
         </Switch>
 
         <Footer />
-      </BrowserRouter >
+      </HashRouter >
     );
   }
 }
